@@ -1,0 +1,19 @@
+import time
+from plyer import notification
+
+count = 0
+print("el reloj pomodoro comenzo comienza a trabajar progromador")
+
+if __name__ == "__main__":
+    while True:
+        time.sleep(1800)
+        count += 1
+        notification.notify(
+            title = "Nice programador!",
+            message = "Descansa 10 minutos bro llevas" + str(count) ,
+        )
+        time.sleep(600)
+        notification.notify(
+            title = "Vuelve al trabajo",
+            message = "TIntenta de nuevo :)",
+        )
